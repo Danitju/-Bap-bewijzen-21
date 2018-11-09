@@ -12,13 +12,20 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('homepage');
+})->name('home');
+
+Route::get('/nieuws', function () {
+    return view('nieuws');
+})->name('nieuws');
 
 Route::get('/team', function () {
-    //return view('welcome');
-    return 'Welcome';
-});
+    return view('team');
+})->name('team');
+
+
+
+
 
 Route::get('/test', 'TestController@index');
 

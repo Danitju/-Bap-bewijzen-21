@@ -8,30 +8,62 @@
     @section('styles')
         <link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}"/>
         <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}"/>
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/master.css') }}"/>
+
     @show
 
     @section('scripts')
     @show
 
-    <title>Mediacollege Amsterdam - @yield('title')</title>
+    <title>Cloud9</title>
 </head>
 <body>
+
+  <div class="container">
+            <nav>
+                  <input type="checkbox" id="nav" class="hidden">
+                  <label for="nav" class="nav-btn">
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                  </label>
+                  <div class="logo">
+                        <a href="{{ route('home')}}">Cloud9</a>
+                  </div>
+                  <div class="nav-wrapper">
+                        <ul>
+                              <li><a href="{{ route('home')}}">Home</a></li>
+                              <li><a href="{{ route('nieuws')}}">Nieuws</a></li>
+                              <li><a href="{{ route('team')}}">Team</a></li>
+                              <li><a href="https://www.twitch.tv/cloud9" target="_blank">Stream</a></li>
+                              <li><a href="{{ route('registration.form')}}">Contact</a></li>
+                        </ul>
+                  </div>
+            </nav>
+      </div>
+
 <div class="container">
     <header>
-        <h1>Mediacollege Amsterdam</h1>
+       <h1 class="pagetitle">@section('pagetitle')
+           Cloud9
+           @show
+      </h1>    
         <h2 class="caps txt-red">@yield('page_title')</h2>
     </header>
+    @section('content') 
+    @show    
+   
     <main>
-        @yield('content')
+ 
     </main>
     @section('footer')
         <footer>
             <div class="row">
-                <div class="col-xs-12 col-sm-6 col-md-2">Opleidingen</div>
-                <div class="col-xs-12 col-sm-6 col-md-2">Nieuwsbrief</div>
-                <div class="col-xs-12 col-sm-6 col-md-2">Inloggen</div>
-                <div class="col-xs-12 col-sm-6 col-md-2">Contact</div>
-                <div class="col-xs-12 col-sm-12 col-md-2">Route</div>
+               <a href="{{ route('home')}}"> <div class="col-xs-12 col-sm-6 col-md-2">Home</div></a>
+               <a href="{{ route('nieuws')}}"> <div class="col-xs-12 col-sm-6 col-md-2">Nieuws</div></a>
+               <a href="{{ route('team')}}"> <div class="col-xs-12 col-sm-6 col-md-2">Team</div></a>
+               <a href="https://www.twitch.tv/cloud9" target="_blank"> <div class="col-xs-12 col-sm-6 col-md-2">Stream</div></a>
+               <a href="{{ route('registration.form')}}"><div class="col-xs-12 col-sm-12 col-md-2">Contact</div></a>
             </div>
         </footer>
     @show

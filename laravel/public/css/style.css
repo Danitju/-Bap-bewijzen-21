@@ -1,0 +1,37 @@
+body{
+    font-family:  Helvetica,;
+}
+
+.pagetitle{
+    text-align: center;
+}
+
+.foto{
+    background-image: url(../images/c9.png);
+  height: 400px;
+  width: auto;
+  font-size: 20px;  
+}
+
+.foto2{
+    background-image: url(../images/c9lol.jpg);
+  height: 400px;
+  width: auto;
+  font-size: 20px;  
+}
+
+.foto3{
+    background-image: url(../images/rooster.jpg);
+  height: 600px;
+  width: auto;
+  font-size: 20px;  
+}
+
+
+.texten{
+    font-size: 20px;  
+    font-family:  Arial;
+    background-color: rgba(255, 255, 255, 0.26);
+    
+
+}

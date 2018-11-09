@@ -1,4 +1,7 @@
 @extends('layouts.master')
+@section('pagetitle')
+Contact
+@endsection
 
 @section('content')
  <h2>Uw gegevens</h2>
@@ -20,21 +23,21 @@
  <div class="form-group">
  <label for="">Voornaam:</label>
  <input type="text" name="firstname" class="form-control"
-value="{{ old('firstname') }}"/>value=""/>
+value="{{ old('firstname') }}"/>
  </div>
  </div>
  <div class="col-2">
  <div class="form-group">
  <label for="">Tussenvoegsel:</label>
  <input type="text" name="middlename" class="form-control"
-value="{{ old('middlename') }}"/>value=""/>
+value="{{ old('middlename') }}"/>
  </div>
  </div>
  <div class="col-5">
  <div class="form-group">
  <label for="">Achternaam:</label>
  <input type="text" name="lastname" class="form-control"
-value="{{ old('lastname') }}"/>value=""/>
+value="{{ old('lastname') }}"/>
  </div>
  </div>
  </div>
@@ -45,7 +48,7 @@ value="{{ old('email') }}"/> </div>
  <div class="form-group">
  <label for="">Geboortedatum:</label>
  <input type="text" name="geboortedatum" class="form-control"
-value="{{ old('geboortedatum') }}"/>value=""/>
+value="{{ old('geboortedatum') }}"/>
  </div>
  <div class="form-group">
  <label for="">Website:</label>
